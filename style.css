@@ -42,6 +42,9 @@
 nav{
 	display: flex;
 	align-items: center;
+	& .btn{
+		margin-left: 300px;
+	}
 }
 .logo{
 	width: 200px;
@@ -89,9 +92,6 @@ li{
 li:hover{
 	transition: .4s;
 	color: rgba(255, 217, 0, 0.836);
-}
-.btn{
- margin-left: 300px;
 }
 .btn button{
 	border-radius: 7px;
@@ -328,8 +328,6 @@ li:hover{
 .updated {
 	background: #1b5af4;/* remeber to add linear gradients*/
 	padding: 05%;
-	width: 100%;
-	position: absolute;
 	& span {
 		position: absolute;
 		font-family: sans-serif;
@@ -353,14 +351,11 @@ li:hover{
 		height: 200px;
 		padding-left: 0;
 		border-radius: 8px;
-		&:nth-child(1) {
-			padding-left: 50%;
-			background: black;
-		}
 		& img {
 			overflow-y: hidden;
 			width: 100%;
 			height: 250px;
+			min-height: 270px;
 			border-radius: 8px;
 			
 		}
@@ -402,6 +397,152 @@ li:hover{
 				color: black;
 				font-size: medium;
 				font-weight: 600;
+			}
+		}
+	}
+}
+
+.ministries {
+	background: white;
+	padding: 5%; 
+	& h4 {
+		color: #1556f8;
+		font-size: medium;
+		font-family: sans-serif;
+	}
+	& p {
+		color: black;
+		padding-top: 25px;
+		font-family: sans-serif;
+		font-size: xx-large;
+		letter-spacing: 1.2px;
+		line-height: 40px;
+	}
+	& .mincards {
+		justify-self: right;
+		display: grid;
+		grid-gap: 10px;
+		width: 100%;
+		margin-top: 50px;
+		& .mincard {
+			padding: 20px;
+			width: 37%;
+			background: rgb(255, 0, 0);
+			border-radius: 12px;
+			font-family: sans-serif;
+			& h2 {
+				font-size: 57px;
+				color: black;
+			}
+			& p {
+				font-size: medium;
+				line-height: 25px;
+				color: #d1d4d7;
+			}
+			& .btn button {
+				background-color: #0036cc;
+				color: white;
+				border-radius: 20px;
+				width: 120px;
+				padding: 12px;
+				font-weight: 600;
+				border: none;
+				margin: 0;
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+.give {
+	background: #0036cc;
+	text-align: center;
+	font-family: sans-serif;
+	padding: 10%;
+	& h4 {
+		font-size: larger;
+		color: rgb(255, 214, 31);
+	}
+	& h1 {
+		color: white;
+		font-size: 49px;
+		padding-top: 70px;	
+	}
+	& .btn button{
+		background: rgb(255, 208, 0);
+		padding: 13px;
+		width: 160px;
+		color: black;
+		border-radius: 23px;
+		font-size: large;
+		border: none;
+		font-weight: 500;
+		margin-top: 70px;
+	}
+}
+
+.reachout {
+	padding: 10%;
+	padding-right: 6%;
+	font-family: sans-serif;
+	& h4 {
+		color: #1b5af4;
+		letter-spacing: 1.1px;
+	}
+	& .flex {
+		width: 90%;
+		display: flex;
+		gap: 5%;
+		margin-top: 50px;
+		& h2 {
+			font-size: 47px;
+			width: 50%;
+			letter-spacing: 1.2px;
+			color: black;
+		}
+		& span {
+			width: 50%;
+			line-height: 35px;
+			font-size: x-large;
+			letter-spacing: 1.2px;
+			color: grey;
+		}
+	}
+	& .reachout-cards {
+		display: grid;
+		grid-template-columns: repeat(2, 2fr);
+		grid-gap: 20px;
+		width: 90%;
+		margin-top: 50px;
+		& .reachout-card {
+			overflow: hidden;
+			background: rgb(32, 32, 32);
+			width: 84%;
+			border-radius: 7px;
+			padding-top: 28%;
+			padding-left: 8%;
+			padding-right: 8%;
+			padding-bottom: 10%;
+			& h2 {
+				font-size: 40px;
+				color: white;
+			}
+			& p {
+				padding-top: 30px;
+				color: #d1d4d7;
+				font-size: larger;
+				letter-spacing: 1.1px;
+				line-height: 30px;
+			}
+			& .btn button{
+				background: rgb(255, 208, 0);
+				padding: 10px;
+				width: 150px;
+				color: black;
+				border-radius: 23px;
+				font-size: large;
+				border: none;
+				margin-top: 50px;
 			}
 		}
 	}
