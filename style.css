@@ -1,0 +1,408 @@
+@font-face {
+	font-family: myFirstFont;
+	src:url('./assets/fonts/Poppins-Regular.ttf'), format('truetype');
+}
+
+@font-face {
+	font-family: mySecondFont;
+	src:url('./assets/fonts/Poppins-ExtraBoldItalic.ttf'), format('truetype');
+}
+
+@font-face {
+	font-family: myThirdFont;
+	src:url('./assets/fonts/Poppins-Bold.ttf'), format('truetype');
+}
+:root{
+
+
+--White: hsl(0, 0%, 100%);
+--Off-white: hsl(0, 0%, 94%);
+--Light-grey: hsl(0, 0%, 86%);
+--Smokey-grey: hsl(0, 1%, 44%);
+--Off-black: hsl(0, 0%, 8%);
+
+}
+*{
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
+}
+
+.main{
+	height: 100%;
+	padding: 20px;
+	width: 100%;
+	background: linear-gradient(to top,hsla(244, 100%, 52%, 0.158)50%,hsla(244, 100%, 52%, 0.158)50%), url(./assets/img/Screenshot_3-11-2024_213023_mfmteens.org.jpeg) ;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	animation: change-background 4.5s linear infinite;
+    
+}
+nav{
+	display: flex;
+	align-items: center;
+}
+.logo{
+	width: 200px;
+	display: flex;
+	font-size: 18px;
+    padding: 10px;
+}
+.logo img{
+	width: 35%;
+	border-radius: 50%;
+	margin: 5px;
+	margin-top: 20px;
+}
+.logo h4{
+	width: 65%;
+	color: var(--White);
+	margin-left: 10px;
+	padding-top: 33px;
+	font-family: sans-serif;
+	text-transform: uppercase;
+
+
+}
+.logo strong{
+	display: block;
+	color: var(--White);
+	font-family: sans-serif;
+	font-style: normal;
+}
+ul{
+	display: flex;
+	margin-left: 250px;
+	margin-top: 20px;
+
+}
+li{
+	list-style: none;
+	margin: 15px;
+	font-family: sans-serif;
+	letter-spacing: 2px;
+	cursor: pointer;
+	color: var(--Off-white);
+	transition: .2s;
+}
+li:hover{
+	transition: .4s;
+	color: rgba(255, 217, 0, 0.836);
+}
+.btn{
+ margin-left: 300px;
+}
+.btn button{
+	border-radius: 7px;
+	margin: 10px;
+	padding: 8px;
+	cursor: pointer;
+	letter-spacing: 1.5px;
+	font-family: sans-serif;
+	transition: .2s;
+	text-transform: capitalize;
+    border: 2px solid var(--White);
+    background: transparent;
+    color: var(--Off-white);
+}
+.btn button:nth-child(1):hover{
+   transition: 0.5s;
+   border: 2px solid var(--Off-white);
+   color: rgba(255, 217, 0, 0.836);
+}
+.btn button:nth-child(2){
+	background: transparent;
+	color: var(--Off-white);
+}
+.btn button:nth-child(2):hover{
+	transition: 0.5s;
+	border: 2px solid var(--Off-white);
+	color: rgba(255, 217, 0, 0.836);
+}
+.greeting{
+	top: 20px;
+}
+.greeting h1{
+	font-size: 80px;
+	margin-top: 30px;
+	margin-left: 30%;
+	font-weight: bolder;
+	text-transform: capitalize;
+	font-family: sans-serif;
+	color: var(--Off-white);
+	letter-spacing: 1.5px;
+}
+.greeting h1 span{
+	padding-left: 50px;
+	color: rgb(255, 214, 31);
+}
+.greeting div{
+	margin-top: 40px;
+	border: 2px solid rgb(255, 214, 31);
+	padding: .35%;
+	border-radius: 30px;
+	width: 200px;
+	height: 40px;
+	transition: .4s;
+	cursor: pointer;
+	justify-self: center;
+	text-align: center;
+	& button{
+		background: rgb(22, 104, 255);
+		border-radius: 30px;
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+		letter-spacing: 1.5px;
+		font-family: sans-serif;
+		transition: .4s;
+		font-size: 16px;
+		border: none;
+		color: var(--White);
+		&:hover {
+			color: rgb(255, 214, 31);
+			background: transparent;
+			transition: .9s;
+		}
+	}
+}
+
+.upcoming-event{
+	text-align: center;
+	color: var(--White);
+	margin: 0px;
+	font-family: sans-serif;
+}
+.upcoming-event h1{
+	color: var(--White);
+	font-size: x-large;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.upcoming-event h4{
+	margin-top: 50px;
+}
+.countdown{
+	display: flex;
+	gap: 7px;
+	font-family: serif;
+	justify-self: center;
+	& button{
+		padding: 10px;
+		color: var(--White);
+		border: 1px solid var(--Off-white);
+		border-radius: 50%;
+		background-color: transparent;
+		cursor: grabbing;
+		&h2 {
+			color: var(--White);
+			font-size: larger;
+			& span {
+				font-size: 10px;
+				font-weight: lighter;
+			}
+		}
+		&:hover {
+			margin-left: 10px;
+			transition: .3s;
+		}
+	}
+}
+
+.space {
+	width: 100%;
+	height: 10px;
+	background: hsl(244, 100%, 11%)50%;
+}
+.more {
+	display: grid;
+	width: 100%;
+	gap: 15px;
+	padding-top: 2.5%;
+	padding-left: 4%;
+	font-family: serif;
+	background: hsl(244, 100%, 14%)50%;
+	padding-bottom: 7%;
+	& h4 {
+		text-align: center;
+		color: #587eda;
+	}
+	& p {
+		text-align: center;
+		color: var(--White);
+		letter-spacing: 1.2px;
+		font-size: xx-large;	
+	}
+	& .list {
+		width: 92%;
+		padding: 15px;
+		border-radius: 8px;
+		margin-top: 20px;
+		background: hsla(236, 85%, 69%, 0.082)50%;
+		& ul {
+			padding: 0;
+			margin: 0;
+			display: grid;
+			grid-template-columns: repeat(3, 2fr);
+			& li {
+				font-size: larger;
+				color: var(--Off-white);
+			}
+		}
+	}
+}
+
+.upcoming {
+	background: white;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 3%;
+	& h4 {
+		color: blue;
+		font-family: sans-serif;
+	}
+	& .cards {
+		display: grid;
+		grid-template-columns: repeat(2, 3fr);
+		grid-gap: 15px;
+		font-family: sans-serif;
+		margin-top: 30px;
+		& .card {
+			display: flex;
+			width: 96%;
+			background: #f5f6fa;
+			padding: 10px;
+			padding-left: 0;
+			border-radius: 8px;
+			& img {
+				width: 100%;
+				height: 250px;
+				border-radius: 8px;
+				
+			}
+			& div {
+				display: grid;
+				margin: 0;
+				padding: 0;
+				padding-left: 20px;
+				& h5 {
+					background-color: var(--White);
+					color: #1b5af4;
+					text-align: center;
+					width: 120px;
+					height: 25px;
+					font-weight: 600;
+					letter-spacing: 1.2px;
+					border-radius: 30px;
+					padding-top: 11.5px;
+				}
+				& h4 {
+					color: #1b5af4;
+					text-align: start;
+					font-weight: 600;
+					letter-spacing: 1.2px;
+					font-size: medium;
+				}
+				& p {
+					color: black;
+					font-size: x-large;
+					font-weight: bold;
+				}
+				& .btn button{
+					width: 140px;
+					height: 40px;
+					border-radius: 18px;
+					overflow: hidden;
+					border: none;
+					background: #d1d4d7;
+					color: black;
+					font-size: medium;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+}
+
+.updated {
+	background: #1b5af4;/* remeber to add linear gradients*/
+	padding: 05%;
+	width: 100%;
+	position: absolute;
+	& span {
+		position: absolute;
+		font-family: sans-serif;
+		font-size: 120px;
+		font-weight: bold;
+		&:nth-child(1) {
+			color: white;
+			padding-left: 20%;
+		}
+		&:nth-child(2) {
+			color: rgb(241, 205, 0);
+			padding-left: 33%;
+			padding-top:10%;
+		} 
+	}
+	& .card {
+		display: flex;
+		width: 550px;
+		background: #f5f6fa;
+		padding: 10px;
+		height: 200px;
+		padding-left: 0;
+		border-radius: 8px;
+		&:nth-child(1) {
+			padding-left: 50%;
+			background: black;
+		}
+		& img {
+			overflow-y: hidden;
+			width: 100%;
+			height: 250px;
+			border-radius: 8px;
+			
+		}
+		& div {
+			display: grid;
+			margin: 0;
+			padding: 0;
+			padding-left: 20px;
+			& h5 {
+				background-color: var(--White);
+				color: #1b5af4;
+				text-align: center;
+				width: 120px;
+				height: 25px;
+				font-weight: 600;
+				letter-spacing: 1.2px;
+				border-radius: 30px;
+				padding-top: 11.5px;
+			}
+			& h4 {
+				color: #1b5af4;
+				text-align: start;
+				font-weight: 600;
+				letter-spacing: 1.2px;
+				font-size: medium;
+			}
+			& p {
+				color: black;
+				font-size: x-large;
+				font-weight: bold;
+			}
+			& .btn button{
+				width: 140px;
+				height: 40px;
+				border-radius: 18px;
+				overflow: hidden;
+				border: none;
+				background: #d1d4d7;
+				color: black;
+				font-size: medium;
+				font-weight: 600;
+			}
+		}
+	}
+}
